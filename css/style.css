@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 html{
     font-size: 10px;
 }
@@ -71,7 +76,7 @@ body{
     text-decoration: none;
     color: rgb(180, 180, 180);;
     font-size: 1.6rem;
-    padding: 2px 6px;
+    padding: 0.2rem 0.6rem;
 }
 
 .nav-list-item:hover{
@@ -249,26 +254,26 @@ footer h3{
     margin: 0;
 }
 
-@media screen and (max-width: 992px) {
+    @media screen and (max-width: 992px) {
     .showcase{ height: 65vh;}
   }
-@media screen and (max-width: 768px) {
+    @media screen and (max-width: 768px) {
     .showcase{ height: 50vh;}
   }
 /* Extra small devices (phones, 600px and down) */
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (max-width: 600px) {
+    @media only screen and (max-width: 600px) {
     html{font-size: 7px;}
     } 
-@media only screen and (max-width: 480px) {
-    html{font-size: 6px;}
+    @media only screen and (max-width: 480px) {
+    html{font-size: 5px;}
     .showcase{ height: 30vh;}
     }
     
-
     @media only screen and (min-width: 600px) {
     html{font-size: 7px;}
     } 
+
   /* Medium devices (landscape tablets, 768px and up) */
   @media only screen and (min-width: 768px) {
     html{font-size: 8px;}
