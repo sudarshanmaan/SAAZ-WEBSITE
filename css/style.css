@@ -285,6 +285,7 @@ body{
     vertical-align: middle;
     position: relative;
     width: 100%;
+    overflow-x: hidden;
 }
 
 .content-para{
@@ -317,6 +318,7 @@ body{
     width: 100rem;
     margin-top: 1rem;
     z-index: -2;
+    overflow-x: hidden;
 }
 
 .color-grey{
