@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,100&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -11,13 +13,14 @@ html, body {
 
 html{
     font-size: 10px;
+    scroll-behavior: smooth;
 }
 
 body{
     font-family: 'Poppins', sans-serif;
     /* font-family: "SF Pro Display", sans-serif; */
     background: #202020;
-    animation: yourAnimation 2s forwards 0s ease-in-out;
+    /* animation: yourAnimation 2s forwards 0s ease-in-out; */
 }
 
 @keyframes yourAnimation{
@@ -80,14 +83,15 @@ body{
 }
 
 .nav-list-item:hover{
-    transform: scale(1.2);
-    background-color: rgba(0, 0, 0, 0.658);
+    background-color: rgba(0, 0, 0);
     color: #ffffff;
-    border-radius: 7px;
+    border-radius: 4px;
+    box-shadow: 1px 1px #ffffff, 2px 2px #ffffff, 3px 3px #ffffff;
+    transform: translateX(-3px);
 }
 
 .showcase{
-    height: 80vh;
+    height: 60vh;
     width: 100%;
     /* background: url(../Images/mic-bg.png) no-repeat; */
     /* background-size: 100%; */
@@ -101,12 +105,10 @@ body{
 @keyframes yourAnimation1{
     0%{
         transform: rotate(0) scale(0.6) skewX(0deg);
-        /* background: linear-gradient(to right, rgb(55, 59, 68), rgb(66, 134, 244)); */
         opacity: 0;
         }
     100%{
         transform: rotate(0) scale(1) skewX(0);
-        /* background: linear-gradient(to right, rgb(55, 59, 68), rgb(66, 134, 244)); */
         opacity: 1;
         }
 }
@@ -139,6 +141,10 @@ body{
         }
 }
 
+#about, #events{
+    transition: all 0.3s ease-out;
+}
+
 .showcase h2{
     position: absolute;
     top: 30rem;
@@ -153,29 +159,10 @@ body{
     left: 5.6%;
 }
 
-.button{
-    position: absolute;
-    vertical-align: middle;
-    top: 48%;
-    left: 5.6%;
-    width: 8rem;
-    padding: 5px 10px;
-    border-radius: 10px;
-    border: 0;
-    background-color: #c5e3f6;
-    transition: 0.4s ease-out;
-}
-
-.button:hover{
-    transform: scale(1.1);
-    background-color: rgba(0, 0, 0, 0.774);
-    color: #44b0d1bb;
-}
-
 .header h1{
     color: #ffffff;
     text-align: center;
-    margin-top: 15rem;
+    margin-top: 10rem;
     margin-bottom: 4rem;
     font-size: 6rem;
     font-weight: 300;
@@ -191,8 +178,106 @@ body{
 
 }
 
+.secondary-text{
+    font-weight: 200;
+    font-size: 3rem;
+    font-style: italic;
+}
+
+.iframe-container{
+    position: relative;
+    width: 70rem;
+    padding-bottom: 70rem; 
+    height: 0;
+    margin-top: 2.6rem;
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+  .iframe-container iframe{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 60%;
+  }
+
+.social-media-head{
+    margin-top: 2rem;
+    font-size: 3.2rem;
+    font-style: italic;
+}
+
+.video-container{
+    width: 100rem;
+    position: relative;
+    margin-top: 2rem;
+    margin-bottom: 6rem;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.video-container video{
+    width: 100%;
+}
+
+.div-1{
+    position: absolute;
+    top: 0;
+    width: 36.5%;
+    height: 100%;
+    background-color: #202020;
+    z-index: 100;
+}
+
+.div-2{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 36.5%;
+    height: 100%;
+    background-color: #202020;
+    z-index: 100;
+}
+
+.social-media-link{
+    z-index: 10;
+}
+
+.social-media-link span{
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: #9c9c9c;
+}
+.social-media-link a:link{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.social-media-link a:visited{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.social-media-link a:hover{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    border-bottom: 3px solid #fff;
+    transition: all 0.2s ease;
+}
+
+.social-media-link a:active{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+
+
 .student-list{
     width: auto;
+}
+
+.student-list li{
+    list-style-type: none;
 }
 
 .main{
@@ -212,6 +297,10 @@ body{
     transform: translateX(-50%);
 }
 
+.orientation-para{
+    margin-top: -25rem;
+}
+
 .plain-text{
     font-size: 2rem;
     color: rgb(192, 192, 192);
@@ -222,6 +311,12 @@ body{
 .events-photo{
     padding: 2.6rem;
     width: 80rem;
+}
+
+.macbook-mockup{
+    width: 100rem;
+    margin-top: 1rem;
+    z-index: -2;
 }
 
 .color-grey{
@@ -241,7 +336,7 @@ footer{
 footer p{
     display: inline-block;
     text-align: right;
-    margin-bottom: 1rem;
+    vertical-align: middle;
 }
 
 footer h3{
@@ -274,9 +369,12 @@ footer h3{
     @media only screen and (max-width: 480px) {
             html{font-size: 5px;}
             .showcase{ height: 30vh;}
+            .logo-head{display: none;}
             }
+            
     @media only screen and (max-width: 380px) {
                 html{font-size: 4.5px;}
+                .logo-head{display: none;}
                 } 
     @media only screen and (min-width: 600px) {
     html{font-size: 7px;}
