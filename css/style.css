@@ -20,7 +20,55 @@ body{
     font-family: 'Poppins', sans-serif;
     /* font-family: "SF Pro Display", sans-serif; */
     background: #202020;
+    overflow-y: hidden;
     /* animation: yourAnimation 2s forwards 0s ease-in-out; */
+}
+
+.complete-body{
+    position: relative;
+    overflow-x: hidden;
+}
+
+.spinner-wrapper{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #161616;
+    z-index: 1000;
+    /* animation: loadingscreen 1.2s forwards; */
+}
+
+.spinner{
+    animation: oscillate 1.5s infinite;
+}
+
+.spinner img{
+    width: 12rem;
+}
+
+
+
+@keyframes loadingscreen {
+    0%{
+    }
+    100%{
+        transform: translateY(-100vh);
+    }
+}
+
+@keyframes oscillate{
+    0%{
+        transform: rotate(-60deg);
+    }
+    50%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(-60deg);
+    }
 }
 
 @keyframes yourAnimation{
@@ -36,6 +84,15 @@ body{
         }
 }
 
+#bootstrap-overrides .navbar-collapse{
+    flex-grow: 0;
+}
+
+#bootstrap-overrides .navbar-toggler-icon{
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
 .main-header{
     background-color: #161616;
     color: white;
@@ -44,11 +101,13 @@ body{
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    overflow-x: hidden;
 }
 
 .brand-logo{
     width: 4.5rem;
     padding: 0.5rem;
+    color: rgb(216, 216, 216);
 }
 .brand{
     display: inline-block;
@@ -67,12 +126,14 @@ body{
 .nav-list-item{
     margin-right: 3rem;
     transition: 0.3s ease;
+    overflow-y: hidden;
 }
 
 .nav-list-items{
     display: flex;
     list-style: none;
     margin: 0;
+    overflow-x: hidden;
 }
 
 .nav-list-items li a{
@@ -86,9 +147,10 @@ body{
     background-color: rgba(0, 0, 0);
     color: #ffffff;
     border-radius: 4px;
-    box-shadow: 1px 1px #ffffff, 2px 2px #ffffff, 3px 3px #ffffff;
+    box-shadow: 1px 1px #e0e0e0, 2px 2px #e0e0e0, 3px 3px #e0e0e0;
     transform: translateX(-3px);
 }
+
 
 .showcase{
     height: 60vh;
@@ -351,32 +413,83 @@ footer h3{
     margin: 0;
 }
 
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
     @media screen and (max-width: 992px) {
     .showcase{ height: 65vh;}
+    #bootstrap-overrides .navbar-collapse{
+        flex-grow: 0;
+    }
+    #bootstrap-overrides ul li{
+        margin: 4rem;
+    }
   }
     @media screen and (max-width: 768px) {
     .showcase{ height: 50vh;}
+    #bootstrap-overrides ul li a{
+        font-size: 2.6rem; 
+    }
   }
 /* Extra small devices (phones, 600px and down) */
 /* Small devices (portrait tablets and large phones, 600px and up) */
     @media screen and (max-width: 600px) {
-        .showcase{ height: 40vh;}
         html{font-size: 7px;}
+        body{overflow-x: hidden;}
+        .brand{margin: 0.2rem 0.8rem;}
+        .brand-logo{width: 6.5rem;}
+        .showcase{ height: 40vh;}
+        .main-header{overflow-x: hidden;}
+        #bootstrap-overrides ul li a{
+            font-size: 2.8rem; 
+        }
     } 
+
+    .nav-active{
+        transform: translateX(0%);
+    }
     
     @media only screen and (max-width: 530px) {
         html{font-size: 6px;}
-        } 
+        .nav-list-items li a{
+            font-size: 4rem;
+        }
+        .brand-logo{width: 10rem;}
+        .logo-head{display: none;}
+        
+        #bootstrap-overrides ul li a{
+            font-size: 3rem; 
+        }
+        #bootstrap-overrides .navbar-toggler-icon{
+            width: 4.5rem;
+            height: 4.5rem;
+        }
+    }
 
     @media only screen and (max-width: 480px) {
             html{font-size: 5px;}
             .showcase{ height: 30vh;}
             .logo-head{display: none;}
+            .brand-logo{width: 9rem;}
             .header h1{
                 font-size: 7rem;
             }
             .sub-header{
                 font-size: 4.5rem;
+            }
+            .social-media-head{
+                font-size: 5rem;
+            }
+            .social-media-link span{
+                font-size: 2.6rem;
             }
             .content-para{
                 font-size: 2.2rem;
@@ -386,6 +499,10 @@ footer h3{
             }
             .macbook-mockup{
                 width: 120rem;
+            }
+            #bootstrap-overrides .navbar-toggler-icon{
+                width: 4.5rem;
+                height: 4.5rem;
             }
             }
             
@@ -398,6 +515,12 @@ footer h3{
                 .sub-header{
                     font-size: 5rem;
                 }
+                .social-media-head{
+                    font-size: 5.5rem;
+                }
+                .social-media-link span{
+                    font-size: 3rem;
+                }
                 .content-para{
                     font-size: 2.6rem;
                 }
@@ -406,6 +529,11 @@ footer h3{
                 }
                 .macbook-mockup{
                     width: 130rem;
+                }
+                #bootstrap-overrides .navbar-toggler-icon{
+                    width: 5.5rem;
+                    height: 5.5rem;
+                    
                 }
                 } 
     @media only screen and (min-width: 600px) {

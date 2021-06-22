@@ -10,50 +10,60 @@
     <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css"
     />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/b2958fbd3d.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel='stylesheet' type='text/css' media='screen' href='css/style.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/bottom-btn.css'>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
     
     <!-- <script src='main.js'></script> -->
 </head>
 <body>
-
+    
+<div class="spinner-wrapper">
+    <div class="spinner">
+        <img src="images/saaz-logo.png" alt="">
+    </div>
+</div>
     <!-- <header > -->
-        <nav class="main-header">
-            <label class="brand">
+        <div class="complete-body">
+        <nav class="main-header navbar navbar-expand-lg navbar-dark" id="bootstrap-overrides">
+            <label class="brand navbar-brand">
                 <a href="index.html"><img src="images/saaz-logo.png" alt="logo" class="brand-logo"><span class="brand-logo logo-head">SAAZ</span></a>
             </label>
 
-            <!-- <input type="checkbox" id="hamburger-toggle">
-            <label for="hamburger-toggle" class="hamburger">
-              <span class="bar"></span>
-            </label> -->
-
-            <ul class="nav-list-items">
-                <li class="nav-list-item">  
-                    <a href="index.html" >HOME</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02" toggle="collapse" data-target=".navbar-collapse">
+            <ul class="nav-list-items navbar-nav me-auto mb-2 mb-lg-0 justify-content-around">
+                <li class="nav-list-item nav-item" >  
+                    <a class="nav-link active" href="index.html" >HOME</a>
                 </li>
-                <li class="nav-list-item">
-                    <a href="#events" >EVENTS</a>
+                <li class="nav-list-item nav-item">
+                    <a class="nav-link active" href="#events" >EVENTS</a>
                 </li>
-                <li class="nav-list-item">
-                    <a href="#" >GALLERY</a>
+                <li class="nav-list-item nav-item">
+                    <a class="nav-link active" href="#" >GALLERY</a>
                 </li>
-                <li class="nav-list-item">
-                    <a href="#about" >ABOUT</a>
+                <li class="nav-list-item nav-item">
+                    <a class="nav-link active" href="#about" >ABOUT</a>
                 </li>
-                <li class="nav-list-item">
-                    <a href="#" >CONTACT US</a>
+                <li class="nav-list-item nav-item">
+                    <a class="nav-link active" href="#" >CONTACT US</a>
                 </li>
+                </ul>
+                </div>
+                
         </nav>
      
     <!-- main-section -->
     <main data-simplebar>
+        <!-- <a class="arrow-up">
+            <span class="left-arm"></span>
+            <span class="right-arm"></span>
+            <span class="arrow-slide"></span>
+          </a> -->
         <div class="showcase">
             <img src="images/mic-bg.png" alt="" class="main-image">
             <h1>SAAZ</h1>
@@ -95,27 +105,27 @@
             <img src="images/cultural-night.png" alt="" class="events-photo">
             <p class="content-para">Saaz along with other clubs helps organise a Cultural Night, an event themed at celebrating the vast diversity of India. With performances in various languages, from various cultures and sung by students from diverse regions, cultural night celebrates our differences while uniting us as Indians.</p>
 
-            <h1 class="sub-header">Quarantined with Saaz</h1>
-            <img src="images/quarantine.png" alt="" class="events-photo">
+            <h1 class="sub-header">Quarantined with Saaz <span class="secondary-text">&ensp;Season 1</span></h1>
+            <img src="images/season-1.png" alt="" class="events-photo">
             <p class="content-para">Quarantined with Saaz was a month-long event that aimed to mitigate some of the boredom brought out by sitting at home all day because of the pandemic. We opened Saaz for submissions and asked everyone to send us videos of them showing their love for music and showcased all of them on our Instagram pages.</p>
 
             <h1 class="sub-header">Orientation 2020</h1>
             <div class="iframe-container">
             <iframe width="560" height="315" src="https://www.youtube.com/embed/D-ipp3DXH-s?start=72" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
-            <p class="content-para orientation-para">Quarantined with Saaz was a month-long event that aimed to mitigate some of the boredom brought out by sitting at home all day because of the pandemic. We opened Saaz for submissions and asked everyone to send us videos of them showing their love for music and showcased all of them on our Instagram pages.</p>
+            <p class="content-para orientation-para">Saaz didn’t cut any corners when it came to welcoming the new 2020 batch ! Even though they were going to be at their homes (quarantined due to the pandemic) .. we made this an orientation video for them to experience the SAAZ (music club of IIITDMJ) firsthand.</p>
 
             <h1 class="sub-header">Quarantined with Saaz <span class="secondary-text">&ensp;freshers edition</span></h1>
             <img src="images/image10.jpg" alt="" class="events-photo">
-            <p class="content-para">Quarantined with Saaz was a month-long event that aimed to mitigate some of the boredom brought out by sitting at home all day because of the pandemic. We opened Saaz for submissions and asked everyone to send us videos of them showing their love for music and showcased all of them on our Instagram pages.</p>
+            <p class="content-para">It was the very first freshers event,  for the new 2020 batch. Giving them an opportunity to showcase their musical talents to their new batchmates.</p>
 
             <h1 class="sub-header">Quarantined with Saaz <span class="secondary-text">&ensp;Season 2</span></h1>
             <img src="images/quarantine.png" alt="" class="events-photo">
-            <p class="content-para">Quarantined with Saaz was a month-long event that aimed to mitigate some of the boredom brought out by sitting at home all day because of the pandemic. We opened Saaz for submissions and asked everyone to send us videos of them showing their love for music and showcased all of them on our Instagram pages.</p>
+            <p class="content-para">After a big hit of the season 1 of Quarantined with Saaz, one year later, we decided to do a 2nd season.The month-long event that aimed to mitigate some of the boredom brought out by sitting at home all day because of the pandemic. We opened Saaz for submissions and asked everyone to send us videos of them showing their love for music and showcased all of them on our Instagram pages</p>
 
             <h1 class="sub-header">Antakshari</h1>
             <img src="images/antakshari.jpg" alt="" class="events-photo">
-            <p class="content-para">On the eve of Independence Day, the members of Second and Third years of the club took over and staged a group patriotic song with who joined along with various instruments in the crew, in the presence of esteemed faculty.</p>
+            <p class="content-para">With the first event of the new session, Saaz decided to have fun with an Online ANTAAKSHARI ! This was a team event aimed at the batchmates getting to know each other, through working in a group environment. The event was a big hit, and everyone sang and played instruments with full enthusiasm !</p>
 
             <h1 class="sub-header">Special Performances</h1>
             <img src="images/independence-day.png" alt="" class="events-photo">
@@ -150,15 +160,27 @@
             <p>Copyright &copy; 2021, Code Addict</p>
         </footer>
     </main>
-<script src="js/rellax.min.js"></script>
-<script>
-    var rellax = new Rellax('.rellax');
-</script>
+</div>
+    <script>
+        let spinnerWrapper = document.querySelector('.spinner-wrapper');
+        window.addEventListener('load', function() {
+            spinnerWrapper.style.animation = 'loadingscreen 1.2s forwards';
+        });
+    </script>
+<!-- <script src="js/rellax.min.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script> -->
+
+<script src="https://kit.fontawesome.com/b2958fbd3d.js" crossorigin="anonymous"></script>
+
+<script src="js/script.js"></script>
 <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
 <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
 <script>
     ScrollOut();
 </script>
+
 
 
 </body>
