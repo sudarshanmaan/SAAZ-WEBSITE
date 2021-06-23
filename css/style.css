@@ -93,6 +93,23 @@ body{
     height: 2.5rem;
 }
 
+#bootstrap-overrides1 .navbar{
+    /*   z-index should be above .close-navbar-toggler */
+      z-index:2;
+    }
+   #bootstrap-overrides1 .close-navbar-toggler{
+      position:absolute;
+      top:0;
+      left:0;
+      height:100%;
+      width:100%;
+      z-index:1;
+      cursor:pointer;
+    }
+   #bootstrap-overrides1 .close-navbar-toggler.collapse{
+      z-index:-1;
+    }
+
 .main-header{
     background-color: #161616;
     color: white;
@@ -412,6 +429,23 @@ footer h3{
     width: 500px;
     margin: 0;
 }
+#bootstrap-overrides{
+    /*   z-index should be above .close-navbar-toggler */
+      z-index:2;
+      box-shadow:0 2px 10px rgba(0,0,0,0.1);
+    }
+    #bootstrap-overrides .close-navbar-toggler{
+      position:absolute;
+      top:0;
+      left:0;
+      height:100%;
+      width:100%;
+      z-index:1;
+      cursor:pointer;
+    }
+    #bootstrap-overrides .close-navbar-toggler.collapsed{
+      z-index:-1;
+    }
 
 @keyframes navLinkFade{
     from{
