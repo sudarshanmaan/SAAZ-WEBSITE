@@ -96,6 +96,7 @@ body{
 #bootstrap-overrides1 .navbar{
     /*   z-index should be above .close-navbar-toggler */
       z-index:2;
+      padding: 0;
     }
    #bootstrap-overrides1 .close-navbar-toggler{
       position:absolute;
@@ -119,6 +120,7 @@ body{
     justify-content: space-between;
     width: 100%;
     overflow-x: hidden;
+    position: fixed;
 }
 
 .brand-logo{
@@ -161,13 +163,30 @@ body{
 }
 
 .nav-list-item:hover{
-    background-color: rgba(0, 0, 0);
-    color: #ffffff;
+    background-color: rgb(226, 226, 226);
+    color: #2c2c2c;
     border-radius: 4px;
-    box-shadow: 1px 1px #e0e0e0, 2px 2px #e0e0e0, 3px 3px #e0e0e0;
+    /* box-shadow: 1px 1px #e0e0e0, 2px 2px #e0e0e0, 3px 3px #e0e0e0; */
     transform: translateX(-3px);
 }
 
+#bootstrap-overrides ul li .nav-link:hover{
+    color: #000;
+    font-weight: 500;
+}
+
+.below-navbar{
+    width: 100%;
+    height: 10rem;
+}
+
+.navbar-toggler{
+    margin-right: 1.1rem
+}
+
+#about, #events, #gallery{
+    height: 1rem;
+}
 
 .showcase{
     height: 60vh;
@@ -177,6 +196,7 @@ body{
     /* background-position: 20px 48px; */
     padding: 2rem;
     margin-left: 0;
+    /* margin-top: 10rem; */
     color: white;
     animation: yourAnimation1 1.2s forwards 0s ease-out;
 }
@@ -241,7 +261,7 @@ body{
 .header h1{
     color: #ffffff;
     text-align: center;
-    margin-top: 10rem;
+    margin-top: 7rem;
     margin-bottom: 4rem;
     font-size: 6rem;
     font-weight: 300;
@@ -381,13 +401,6 @@ body{
     margin-top: -25rem;
 }
 
-.plain-text{
-    font-size: 2rem;
-    color: rgb(192, 192, 192);
-    text-align: center;
-    font-weight: 400;
-}
-
 .events-photo{
     padding: 2.6rem;
     width: 80rem;
@@ -404,31 +417,229 @@ body{
     color: rgb(151, 151, 151);
 }
 
+.profile-cards{
+    padding: 3rem;
+    margin-top: 4rem;
+
+}
+
+#team{
+    width: 100%;
+    height: 1.8rem;
+}
+
+.our-team {
+    padding: 30px 0 40px;
+    margin-bottom: 30px;
+    /* background-color: #a5a5a5; */
+    background-color: #485461;
+    background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);
+    
+
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    border-radius: 1.2rem;
+  }
+  
+  .our-team .picture {
+    display: inline-block;
+    height: 130px;
+    width: 130px;
+    margin-bottom: 50px;
+    z-index: 1;
+    position: relative;
+  }
+  
+  .our-team .picture::before {
+    content: "";
+    width: 100%;
+    height: 0;
+    border-radius: 50%;
+    background-color: #485461;
+    position: absolute;
+    bottom: 135%;
+    right: 0;
+    left: 0;
+    opacity: 0.9;
+    transform: scale(3);
+    transition: all 0.3s linear 0s;
+  }
+  
+  .our-team:hover .picture::before {
+    height: 100%;
+  }
+  
+  .our-team .picture::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #485461;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+  
+  .our-team .picture img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    transform: scale(1);
+    transition: all 0.9s ease 0s;
+  }
+  
+  .our-team:hover .picture img {
+    box-shadow: 0 0 0 14px #28313b;
+    transform: scale(0.7);
+  }
+  
+.our-team .team-content .name{
+    color: #fff;
+    font-size: 2rem;
+}
+
+  .our-team .title {
+    display: block;
+    font-size: 15px;
+    color: #aaaaaa;
+    text-transform: capitalize;
+  }
+  
+  .our-team .social {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: #687a8d;
+    position: absolute;
+    bottom: -100px;
+    left: 0;
+    transition: all 0.5s ease 0s;
+  }
+  
+  .our-team:hover .social {
+    bottom: 0;
+  }
+  
+  .our-team .social li {
+    display: inline-block;
+  }
+  
+  .our-team .social li a {
+    display: block;
+    padding: 10px;
+    font-size: 17px;
+    color: white;
+    transition: all 0.3s ease 0s;
+    text-decoration: none;
+  }
+  
+  .our-team .social li a:hover {
+    color: #1369ce;
+    background-color: #f7f5ec;
+  }
+
+
+ .member-profile .plain-text{
+    font-size: 2rem;
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    /* text-align: center; */
+    font-weight: 400;
+    padding: 0 4rem;
+    height: 100%;
+    vertical-align: middle;
+}
+
+#committee{
+    margin-top: 6rem;
+}
+
+  .committee{
+      width: 40%;
+      background-image: linear-gradient(315deg, #485461 0%, #28313b 74%);
+      padding: 4rem 2rem;
+      border-radius: 2rem;
+      margin-top: 4rem;
+      margin-left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+
+  }
+  .member-profile{
+      display: table;
+      margin: 2rem 0;
+  }
+
+.profile-picture{
+    display: inline-block;
+    height: 12rem;
+    width: 12rem;
+    z-index: 1;
+    margin-left: 3rem;
+    position: relative;
+}
+
+.profile-picture img{
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    /* transform: scale(1); */
+    transition: all 0.9s ease 0s;
+}
 footer{
     background-color: #333;
     color: #fff;
     padding: 1.2rem;
     margin-top: 4%;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     display: flex;
     justify-content: space-between;
 }
 
-footer p{
-    display: inline-block;
+footer a{
+    display: inline;
     text-align: right;
-    vertical-align: middle;
+    /* vertical-align: middle; */
+    text-decoration: none;
+    color: #fff;
+    /* width: 20%; */
+}
+
+footer a:hover{
+    text-decoration: none;
+    color: rgb(151, 151, 151);
+}
+
+footer a:link{
+    text-decoration: none;
+    /* color: #fff; */
+}
+
+footer a:visited{
+    text-decoration: none;
+    /* color: #fff; */
 }
 
 footer h3{
     display: inline-block;
-    font-size: 1.6rem;
+    /* font-size: 1.6rem; */
     font-weight: 300;
     text-align: left;
     padding-right: 3rem;
     width: 500px;
     margin: 0;
 }
+
+#gallery-container{
+    width: 70%;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+
 #bootstrap-overrides{
     /*   z-index should be above .close-navbar-toggler */
       z-index:2;
@@ -458,13 +669,25 @@ footer h3{
     }
 }
 
+@media screen and (max-width: 1065px){
+    .committee{
+        width: 45%;
+    }
+}
+
     @media screen and (max-width: 992px) {
-    .showcase{ height: 65vh;}
+    .showcase{ height: 50vh;}
     #bootstrap-overrides .navbar-collapse{
         flex-grow: 0;
     }
     #bootstrap-overrides ul li{
         margin: 4rem;
+    }
+    #gallery-container{
+        width: 80%;
+    }
+    .member-profile .plain-text{
+        font-size: 2.4rem;
     }
   }
     @media screen and (max-width: 768px) {
@@ -472,6 +695,19 @@ footer h3{
     #bootstrap-overrides ul li a{
         font-size: 2.6rem; 
     }
+    #gallery-container{
+        width: 90%;
+    }
+    .our-team .team-content .name{
+        font-size: 2.6rem;
+    }
+    .committee{
+        width: 55%;
+    }
+    .member-profile .plain-text{
+        font-size: 2.4rem;
+    }
+    
   }
 /* Extra small devices (phones, 600px and down) */
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -484,6 +720,19 @@ footer h3{
         .main-header{overflow-x: hidden;}
         #bootstrap-overrides ul li a{
             font-size: 2.8rem; 
+        }
+        /* #gallery-container{
+            width: 100%;
+        } */
+        footer a{
+            width: 12%;
+        }
+        .committee{
+            width: 60%;
+        }
+        .member-profile .plain-text{
+            font-size: 2.8rem;
+            padding: 0 2rem;
         }
     } 
 
@@ -505,6 +754,9 @@ footer h3{
         #bootstrap-overrides .navbar-toggler-icon{
             width: 4.5rem;
             height: 4.5rem;
+        }
+        .our-team .team-content .name{
+            font-size: 3rem;
         }
     }
 
@@ -538,6 +790,18 @@ footer h3{
                 width: 4.5rem;
                 height: 4.5rem;
             }
+            .carousel-indicators [data-bs-target]{
+                width: 20px!important;
+            }
+            footer{
+                font-size: 2rem;
+            }
+            footer a{
+                width: 16%;
+            }
+            .our-team .team-content .name{
+                font-size: 3.2rem;
+            }
             }
             
     @media only screen and (max-width: 380px) {
@@ -568,6 +832,15 @@ footer h3{
                     width: 5.5rem;
                     height: 5.5rem;
                     
+                }
+                footer{
+                    font-size: 2.4rem;
+                }
+                footer a{
+                    width: 20%;
+                }
+                .our-team .team-content .name{
+                    font-size: 3.8rem;
                 }
                 } 
     @media only screen and (min-width: 600px) {
