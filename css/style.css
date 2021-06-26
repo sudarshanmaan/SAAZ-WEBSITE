@@ -409,7 +409,7 @@ body{
 .macbook-mockup{
     width: 100rem;
     margin-top: 1rem;
-    z-index: -2;
+    z-index: -100;
     overflow-x: hidden;
 }
 
@@ -850,11 +850,15 @@ footer h3{
                     font-size: 3.4rem;
                 }
                 footer a{
-                    width: 30%;
+                    width: 40%;
                 }
                 .our-team .team-content .name{
                     font-size: 3.8rem;
                 }
+                
+            .committee{
+                width: 70%;
+            }
                 } 
                 @media only screen and (max-width: 300px){
                     html{font-size: 3.8px;}
@@ -862,6 +866,9 @@ footer h3{
                         font-size: 2.2rem;
                     }
                     .committee{
+                        width: 75%;
+                    }
+                    footer a{
                         width: 70%;
                     }
                 }
