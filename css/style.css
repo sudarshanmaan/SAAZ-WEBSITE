@@ -600,6 +600,7 @@ footer{
 }
 
 footer a{
+    font-weight: 500;
     display: inline;
     text-align: right;
     /* vertical-align: middle; */
@@ -734,6 +735,12 @@ footer h3{
             font-size: 2.8rem;
             padding: 0 2rem;
         }
+        footer h3{
+            font-size: 2.4rem;
+        }
+        footer{
+            font-size: 2.4rem;
+        }
     } 
 
     .nav-active{
@@ -793,8 +800,11 @@ footer h3{
             .carousel-indicators [data-bs-target]{
                 width: 20px!important;
             }
+            footer h3{
+                font-size: 2.8rem;
+            }
             footer{
-                font-size: 2rem;
+                font-size: 2.8rem;
             }
             footer a{
                 width: 16%;
@@ -833,11 +843,14 @@ footer h3{
                     height: 5.5rem;
                     
                 }
+                footer h3{
+                    font-size: 3.4rem;
+                }
                 footer{
-                    font-size: 2.4rem;
+                    font-size: 3.4rem;
                 }
                 footer a{
-                    width: 20%;
+                    width: 30%;
                 }
                 .our-team .team-content .name{
                     font-size: 3.8rem;
